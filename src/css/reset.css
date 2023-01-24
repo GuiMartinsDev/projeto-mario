@@ -1,0 +1,64 @@
+:root {
+  --color-bg-mobile: #f44336;
+  --gradient-video: 90deg, rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7959558823529411) 50%, rgba(0, 0, 0, 1) 100%;
+  --color-primary: #ff0021;
+  --btn-color-mb: #292626;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #111010;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.fundo-video {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fundo-video .video {
+  height: 100vh;
+}
+
+.fundo-video::after {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(var(--gradient-video));
+}
+
+@media (max-width: 800px) {
+  body {
+    background-color: var(--color-bg-mobile);
+  }
+
+  .fundo-video {
+    display: none;
+  }
+}

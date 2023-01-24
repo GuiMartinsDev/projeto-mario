@@ -1,0 +1,41 @@
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cabecalho .logo {
+  width: 65px;
+}
+
+.menu-lista {
+  display: flex;
+  gap: 40px;
+}
+
+.menu-lista a {
+  font-size: 1.3rem;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 25px;
+}
+
+.menu-lista a:hover {
+  background-color: var(--color-primary);
+}
+
+@media (max-width: 800px) {
+  .cabecalho {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .menu-lista {
+    gap: 20px;
+  }
+}
